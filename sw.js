@@ -1,4 +1,4 @@
-const CACHE_NAME = "mitu-assessment-v110";
+const CACHE_NAME = "mitu-assessment-v110-icon-transparent";
 const APP_SHELL = [
   "./米兔評量小管家_v110.html",
   "./manifest.webmanifest",

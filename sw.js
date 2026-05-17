@@ -1,4 +1,4 @@
-const CACHE_NAME = "mitu-assessment-v110-icon-transparent-2";
+const CACHE_NAME = "mitu-assessment-v110-mobile-layout-1";
 const APP_SHELL = [
   "./index.html",
   "./manifest.webmanifest",

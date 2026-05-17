@@ -58,17 +58,28 @@
     }
 
     * { box-sizing: border-box; }
+
+    html {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       margin: 0;
       font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
       background: var(--bg);
       color: var(--text);
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     .container {
+      width: 100%;
       max-width: 1280px;
       margin: 0 auto;
       padding: 20px;
+      overflow-x: clip;
     }
 
     .hero {
@@ -82,6 +93,8 @@
       gap: 16px;
       align-items: flex-start;
       flex-wrap: wrap;
+      max-width: 100%;
+      min-width: 0;
     }
 
     .hero h1 {
@@ -139,6 +152,8 @@
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
+      max-width: 100%;
+      min-width: 0;
     }
 
     button, .btn, select, input, textarea {
@@ -179,6 +194,7 @@
       overflow-x: auto;
       padding-bottom: 4px;
       scrollbar-width: thin;
+      max-width: 100%;
     }
 
     .tab-btn {
@@ -223,6 +239,8 @@
       border-radius: var(--radius);
       padding: 18px;
       box-shadow: var(--shadow);
+      max-width: 100%;
+      min-width: 0;
     }
 
     .stat-card h3 {
@@ -293,9 +311,11 @@
     }
 
     .table-wrap {
+      max-width: 100%;
       overflow: auto;
       border: 1px solid var(--line);
       border-radius: 14px;
+      -webkit-overflow-scrolling: touch;
     }
 
     table {
@@ -859,11 +879,15 @@
 
     .assessment-matrix-wrap {
       margin-top: 12px;
+      width: 100%;
+      max-width: 100%;
       overflow: auto;
       max-height: 68vh;
       border: 1px solid var(--line);
       border-radius: 16px;
       background: white;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
     }
 
     .assessment-matrix-table {
@@ -1028,6 +1052,10 @@
     }
 
     @media (max-width: 700px) {
+      body {
+        position: relative;
+      }
+
       .teacher-plan-grid {
         grid-template-columns: 1fr;
       }
@@ -1070,6 +1098,42 @@
         padding-bottom: 6px;
       }
 
+      .hero {
+        padding: 16px;
+        border-radius: 18px;
+      }
+
+      .hero-main {
+        width: 100%;
+        align-items: flex-start;
+      }
+
+      .toolbar,
+      .form-actions,
+      .inline-tools,
+      .assessment-subtabs,
+      .assessment-form-foot,
+      .teacher-plan-launch-actions {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
+
+      .card,
+      .assessment-matrix-card {
+        padding: 14px;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .card > *,
+      .assessment-matrix-card > *,
+      .tab-panel,
+      .assessment-view {
+        min-width: 0;
+        max-width: 100%;
+      }
+
       .tab-btn,
       .assessment-subtab-btn,
       .tabs > .secondary {
@@ -1103,7 +1167,20 @@
 
       .hero h1 { font-size: 22px; }
       .brand-mark { width: 64px; height: 64px; }
-      .container { padding: 14px; }
+      .container {
+        padding: 12px;
+        max-width: 100vw;
+      }
+
+      .assessment-matrix-summary {
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+
+      .assessment-matrix-wrap {
+        margin-left: 0;
+        margin-right: 0;
+      }
 
       .mobile-only {
         display: block;

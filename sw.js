@@ -1,7 +1,8 @@
-const CACHE_NAME = "mitu-assessment-v110-icon-transparent";
+const CACHE_NAME = "mitu-assessment-v110-icon-transparent-2";
 const APP_SHELL = [
-  "./米兔評量小管家_v110.html",
+  "./index.html",
   "./manifest.webmanifest",
+  "./icons/icon-32.png",
   "./icons/icon-192.png",
   "./icons/icon-512.png"
 ];
@@ -45,7 +46,7 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(() => {
           if (event.request.mode === "navigate") {
-            return caches.match("./米兔評量小管家_v110.html");
+            return caches.match("./index.html");
           }
           return undefined;
         });

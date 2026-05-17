@@ -1,0 +1,27 @@
+{
+  "name": "\u7c73\u5154\u8a55\u91cf\u5c0f\u7ba1\u5bb6",
+  "short_name": "\u7c73\u5154\u8a55\u91cf",
+  "description": "\u7c73\u5154\u8a55\u91cf\u5c0f\u7ba1\u5bb6 v110",
+  "start_url": "./\u7c73\u5154\u8a55\u91cf\u5c0f\u7ba1\u5bb6_v110.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f6f7fb",
+  "theme_color": "#2563eb",
+  "lang": "zh-Hant",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "version": "v110"
+}
